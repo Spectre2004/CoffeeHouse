@@ -3,8 +3,11 @@
 <h1> Матюхин Вячеслав 3ИСП9-14 <h1/>
 
 
-<b>База данных<b/>
-![image](https://user-images.githubusercontent.com/91986015/218982834-f96fdf9e-6470-44dc-9fe0-075fac956990.png)
+<b>
+  База данных
+  ![image](https://user-images.githubusercontent.com/91986015/218982834-f96fdf9e-6470-44dc-9fe0-075fac956990.png)
+<b/>
+
 
 
 <b>Структура проекта<b/>
