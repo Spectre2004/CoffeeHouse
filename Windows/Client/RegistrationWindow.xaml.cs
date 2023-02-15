@@ -37,7 +37,7 @@ namespace CoffeeHouse.Windows.Client
         {
             if (string.IsNullOrWhiteSpace(TbLogin.Text))
             {
-                MessageBox.Show("Логин не может быть пустым");
+                MessageBox.Show("Логин не может быть пустым.");
                 return;
             }
 
