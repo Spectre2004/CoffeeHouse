@@ -6,10 +6,13 @@
         xmlns:local="clr-namespace:CoffeeHouse.Windows.Client"
         mc:Ignorable="d"
         Title="AuthWindow" Height="600" Width="400"
-        WindowStartupLocation="CenterScreen" Background="#00FFFF">
+        WindowStartupLocation="CenterScreen" >
+    <Window.Background>
+        <ImageBrush ImageSource="\Resources\Images\back.jpg"/>
+    </Window.Background>
 
     <Window.Resources>
-       
+        
 
     </Window.Resources>
     <Grid>
@@ -22,8 +25,8 @@
             <TextBlock Text="Введите логин" FontSize="18" Margin="0 50 0 0">
                 
             </TextBlock>
-            <Border Margin="0 15 0 0" CornerRadius="5" BorderBrush="Gray" BorderThickness="2" Padding="1">
-                <TextBox x:Name="TbLogin" Padding="3" Background="{x:Null}" BorderThickness="0" Height="22" Margin="0 0 0 0">
+            <Border Margin="0 15 0 0" BorderBrush="Black" CornerRadius="5" BorderThickness="2" Padding="1">
+                <TextBox x:Name="TbLogin"  Padding="3" Background="{x:Null}" BorderThickness="0" Height="22" Margin="0 0 0 0">
 
                 </TextBox>
             </Border>
@@ -31,7 +34,7 @@
             <TextBlock Text="Введите пароль" FontSize="18" Margin="0 50 0 0">
 
             </TextBlock>
-            <Border Margin="0 15 0 0" CornerRadius="5" BorderBrush="Gray" BorderThickness="2" Padding="1">
+            <Border Margin="0 15 0 0" CornerRadius="5" BorderBrush="Black" BorderThickness="2" Padding="1">
                 <PasswordBox x:Name="PbPassword" Padding="3" Background="{x:Null}" VerticalAlignment="Center" BorderThickness="0" Height="22" Margin="0 0 0 0">
                     
                 </PasswordBox>

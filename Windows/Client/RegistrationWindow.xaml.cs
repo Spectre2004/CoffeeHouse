@@ -35,9 +35,17 @@ namespace CoffeeHouse.Windows.Client
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TbLogin.Text))
+            if (string.IsNullOrWhiteSpace(TbLogin.Text) || string.IsNullOrWhiteSpace(TbFio.Text) ||
+                string.IsNullOrWhiteSpace(TbPassword.Text) || string.IsNullOrWhiteSpace(TbPasswordRepeat.Text) ||
+                string.IsNullOrWhiteSpace(TbEmail.Text))
             {
-                MessageBox.Show("Логин не может быть пустым.");
+                MessageBox.Show("Все поля должны быть заполнены.");
+                return;
+            }
+
+            if (TbPassword.Text != TbPasswordRepeat.Text)
+            {
+                MessageBox.Show("Пароли не одинаковы.");
                 return;
             }
 
@@ -50,9 +58,17 @@ namespace CoffeeHouse.Windows.Client
             }
 
             DB.Account account = new DB.Account();
-            account.FirstName = TbFio.Text.Split(' ')[0];
-            account.Surname = TbFio.Text.Split(' ')[1];
-            account.Patronymic = TbFio.Text.Split(' ')[2];
+            try
+            {
+                account.FirstName = TbFio.Text.Split(' ')[0];
+                account.Surname = TbFio.Text.Split(' ')[1];
+                account.Patronymic = TbFio.Text.Split(' ')[2];
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ФИО в формате {фамилия имя отчество}");
+                return;
+            }
             account.Login = TbLogin.Text;
             account.Email = TbEmail.Text;
             account.Password = TbPassword.Text;
