@@ -18,20 +18,20 @@ namespace CoffeeHouse.DB
         public Product()
         {
             this.SaleProduct = new HashSet<SaleProduct>();
-            this.Category = new HashSet<Category>();
         }
     
         public int IdProduct { get; set; }
         public string ProdName { get; set; }
         public decimal Price { get; set; }
-        public bool InStock { get; set; }
+        public Nullable<bool> InStock { get; set; }
         public Nullable<int> IdDiscount { get; set; }
         public string Description { get; set; }
+        public byte[] ProdImage { get; set; }
+        public int IdCategory { get; set; }
     
+        public virtual Category Category { get; set; }
         public virtual Discount Discount { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SaleProduct> SaleProduct { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Category> Category { get; set; }
     }
 }

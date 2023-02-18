@@ -107,6 +107,12 @@
     <Compile Include="DB\SaleProduct.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -140,14 +146,14 @@
     <Compile Include="Windows\DIrector\DirectorsStatisticWindow.xaml.cs">
       <DependentUpon>DirectorsStatisticWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\General\AddEditProd.xaml.cs">
+      <DependentUpon>AddEditProd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Manager\ManagerClientListWindow.xaml.cs">
       <DependentUpon>ManagerClientListWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Manager\ManagerCreateOrderWindow.xaml.cs">
       <DependentUpon>ManagerCreateOrderWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\General\RegistrationWindow.xaml.cs">
-      <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\Client\OneProductPage.xaml">
       <SubType>Designer</SubType>
@@ -165,16 +171,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\General\AuthorizationWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Windows\General\AuthorizationWindow.xaml.cs">
-      <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\Client\ClientMainWindow.xaml">
@@ -201,15 +199,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\General\AddEditProd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Manager\ManagerClientListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Manager\ManagerCreateOrderWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\General\RegistrationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -255,20 +253,22 @@
     <Folder Include="Resources\Texts\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Images\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DB\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="DB\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resources\Images\back.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
