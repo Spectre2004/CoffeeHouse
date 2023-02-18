@@ -30,4 +30,14 @@
 ![image](https://user-images.githubusercontent.com/91986015/218982131-b6cee76a-b6ca-41cd-9e49-09049db09303.png)
 ![image](https://user-images.githubusercontent.com/91986015/218982279-a0b7bfeb-4042-49ad-acc4-0baff83aeaa1.png)
 
+  
+<b>Добавление продукта в БД<b/>
+  
+![image](https://user-images.githubusercontent.com/91986015/219852174-9df45fb9-ec31-4c9a-8d33-9f0475cf9f2b.png)
+![image](https://user-images.githubusercontent.com/91986015/219852202-b85b9049-9780-4e7e-afca-d00e9bbffd09.png)
+![image](https://user-images.githubusercontent.com/91986015/219852453-3464e83e-f30c-4b70-9358-dc6f73f19be9.png)
+![image](https://user-images.githubusercontent.com/91986015/219852461-fbf48dc7-1bf7-404c-b3a0-b9d2135334f1.png)
+
+
+
 
