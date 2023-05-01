@@ -1,0 +1,52 @@
+﻿<Window x:Class="CoffeeHouse.Windows.DIrector.SalesList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeeHouse.Windows.DIrector"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        MaxHeight="620"
+        Title="SalesList" Height="620" Width="1100">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="Список продаж" HorizontalAlignment="Center"
+               FontSize="32"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Сортировать по:" ></Label>
+                <ComboBox x:Name="cmbSort" SelectedIndex="0"
+                          SelectionChanged="cmbSort_SelectionChanged">
+                    <ComboBoxItem Content="Не выбрано"/>
+                    <ComboBoxItem Content="Сотрудник"/>
+                    <ComboBoxItem Content="Клиент"/>
+                    <ComboBoxItem Content="Время продажи"/>
+                    <ComboBoxItem Content="Продукт"/>
+                    <ComboBoxItem Content="Количество"/>
+                    <ComboBoxItem Content="Цена"/>
+                </ComboBox>
+                <DatePicker x:Name="dpStd" SelectedDateChanged="dpStd_SelectedDateChanged" />
+            </StackPanel>
+            
+            
+            <DataGrid x:Name="dgSaleList"
+                  VerticalScrollBarVisibility="Auto"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Margin="0 0 0 0"
+                  Height="500">
+
+
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="Код продажи" Binding="{Binding SaleCode}"/>
+                    <DataGridTextColumn Header="Время продажи" Binding="{Binding SaleDateTime}"/>
+                    <DataGridTextColumn Header="Сотрудник" Binding="{Binding EmployeerName}"/>
+                    <DataGridTextColumn Header="Клиент" Binding="{Binding ClientName}"/>
+                    <DataGridTextColumn Header="Товар" Binding="{Binding ProductName}"/>
+                    <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}"/>
+                    <DataGridTextColumn Header="Итоговая цена" Binding="{Binding FullPrice}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>

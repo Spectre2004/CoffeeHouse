@@ -15,13 +15,19 @@ using System.Windows.Shapes;
 namespace CoffeeHouse.Windows.DIrector
 {
     /// <summary>
-    /// Логика взаимодействия для DirectorEmployeesList.xaml
+    /// Логика взаимодействия для DirectorsStatistic.xaml
     /// </summary>
-    public partial class DirectorEmployeesList : Window
+    public partial class DirectorControllWindow : Window
     {
-        public DirectorEmployeesList()
+        public DirectorControllWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnSaleList_Click(object sender, RoutedEventArgs e)
+        {
+            SalesList salesList = new SalesList();
+            salesList.Show();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoffeeHouse.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 using static CoffeeHouse.ClassHelper.EFClass;
+using CoffeeHouse.Windows.General;
+using CoffeeHouse.Windows.DIrector;
 
 namespace CoffeeHouse.Windows.Client
 {
@@ -37,7 +40,21 @@ namespace CoffeeHouse.Windows.Client
                 Where(i => i.Login == TbLogin.Text && i.Password == PbPassword.Password).FirstOrDefault();
             if (autherUser != null)
             {
-                MessageBox.Show("Ок");
+                if (autherUser.IdRole == 1)
+                {
+                    MessageBox.Show("Успех");
+                    ProductList productList = new ProductList();
+                    productList.Show();
+                    Close();
+                }
+                else if (autherUser.IdRole == 2)
+                {
+                    MessageBox.Show("Успех, вы вошли как директор");
+                    DirectorControllWindow directorsStatistic = new DirectorControllWindow();
+                    directorsStatistic.Show();
+                    Close();
+                }
+                
             }
             else
             {
