@@ -38,6 +38,12 @@
 ![image](https://user-images.githubusercontent.com/91986015/219852453-3464e83e-f30c-4b70-9358-dc6f73f19be9.png)
 ![image](https://user-images.githubusercontent.com/91986015/219852461-fbf48dc7-1bf7-404c-b3a0-b9d2135334f1.png)
 
+<b>Функция скидки каждый четвертый четверг месяца<b/>
+
+![image](https://user-images.githubusercontent.com/91986015/236329361-18a650a2-35b2-4aca-9211-ba535b09a77a.png)
+![image](https://user-images.githubusercontent.com/91986015/236329694-325aa739-137a-4d0c-b046-98d31b5402c6.png)
+![image](https://user-images.githubusercontent.com/91986015/236329842-5991c038-6056-4cb5-8bd1-f8a40ad4eba6.png)
+
 
 
 
