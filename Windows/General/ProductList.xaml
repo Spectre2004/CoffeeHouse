@@ -64,17 +64,37 @@
                                        FontSize="18"
                                        FontWeight="Bold"
                                        Margin="10 0 0 0"
-                                       TextWrapping="Wrap"/>
+                                       TextWrapping="NoWrap"/>
 
                             <TextBlock Text="{Binding Price}"
                                        FontSize="18"
                                        FontWeight="Bold"
                                        Margin="10 0 0 0"/>
+                            <Button x:Name="addBasket" 
+                                    Width="30"
+                                    Height="30"
+                                    Margin="0 0 0 0"
+                                    HorizontalAlignment="Right"
+                                    Content="+"
+                                    FontSize="18"
+                                    VerticalContentAlignment="Center" RenderTransformOrigin="0.492,0.569"
+                                    Click="addBasket_Click"/>
                         </StackPanel>
+                        
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
 
         </ListView>
+        <Button x:Name="btnBasket" HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Grid.Row="3"
+                Width="100"
+                Height="60"
+                Content="В корзину"
+                FontSize="20"
+                Click="btnBasket_Click">
+
+        </Button>
     </Grid>
 </Window>
